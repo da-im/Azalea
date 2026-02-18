@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Azalea Affairs Design System - Luxury Event Decoration */
+
+@layer base {
+  :root {
+    /* Core Palette - Deep Luxury */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    
+    /* Card surfaces with subtle warmth */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Primary - Deep Magenta/Purple from logo */
+    --primary: 312 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Muted Purple */
+    --secondary: 300 20% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    /* Muted tones */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    
+    /* Accent - Gold */
+    --accent: 38 75% 55%;
+    --accent-foreground: 0 0% 5%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 312 100% 45%;
+    
+    --radius: 0.25rem;
+    
+    /* Custom luxury colors */
+    --magenta: 312 100% 45%;
+    --magenta-glow: 312 100% 55%;
+    --gold: 38 75% 55%;
+    --gold-light: 38 80% 70%;
+    --cream: 40 30% 90%;
+    --deep-black: 0 0% 4%;
+    --charcoal: 0 0% 10%;
+    
+    /* Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(312 100% 45%) 0%, hsl(280 80% 35%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 75% 55%) 0%, hsl(38 80% 70%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(0, 0%, 0%, 0.4) 0%, hsla(0, 0%, 0%, 0.7) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsla(312, 100%, 45%, 0.3);
+    --shadow-soft: 0 4px 20px hsla(0, 0%, 0%, 0.5);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 312 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 312 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero text glow effect */
+  .text-glow {
+    text-shadow: 0 0 40px hsla(312, 100%, 45%, 0.5),
+                 0 0 80px hsla(312, 100%, 45%, 0.3);
+  }
+  
+  /* Elegant link underline animation */
+  .link-elegant {
+    @apply relative;
+  }
+  
+  .link-elegant::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-primary origin-right transition-transform duration-500 scale-x-0;
+  }
+  
+  .link-elegant:hover::after {
+    @apply origin-left scale-x-100;
+  }
+  
+  /* Image overlay for hero */
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0.3) 0%,
+      hsla(0, 0%, 0%, 0.5) 50%,
+      hsla(0, 0%, 0%, 0.7) 100%
+    );
+  }
+  
+  /* Luxury card styling */
+  .luxury-card {
+    @apply bg-card border border-border/50 backdrop-blur-sm;
+    box-shadow: 0 4px 30px hsla(0, 0%, 0%, 0.3);
+  }
+  
+  /* Gold accent line */
+  .accent-line {
+    @apply h-px w-24 mx-auto;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  }
+  
+  /* Fade in up animation for scroll */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Cinematic hero image transition */
+  .hero-image {
+    @apply absolute inset-0 w-full h-full object-cover;
+    transition: opacity 1.5s ease-in-out, transform 8s ease-out;
+  }
+  
+  .hero-image.active {
+    @apply opacity-100;
+    transform: scale(1.05);
+  }
+  
+  .hero-image.inactive {
+    @apply opacity-0;
+    transform: scale(1);
+  }
+  
+  
+  /* Portfolio grid */
+  .portfolio-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  /* Service card hover */
+  .service-card {
+    @apply relative overflow-hidden transition-all duration-500;
+  }
+  
+  .service-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+    background: linear-gradient(135deg, hsla(312, 100%, 45%, 0.1), transparent);
+  }
+  
+  .service-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  .service-card:hover {
+    @apply border-primary/50;
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+}
