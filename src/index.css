@@ -195,7 +195,7 @@
   
   .service-card:hover {
     @apply border-primary/50;
-    box-shadow: var(--shadow-glow);
+    box-shadow: var(--shadow-glow); 
   }
 }
 

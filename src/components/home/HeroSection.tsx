@@ -1,17 +1,17 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Send, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Send, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-import weddingVenue from '@/assets/hero/wedding-venue.jpg';
-import corporateGala from '@/assets/hero/corporate-gala.jpg';
-import celebrationDecor from '@/assets/hero/celebration-decor.jpg';
+import weddingVenue from "@/assets/hero/wedding-venue.jpg";
+import corporateGala from "@/assets/hero/corporate-gala.jpg";
+import celebrationDecor from "@/assets/hero/celebration-decor.jpg";
 
 const heroImages = [
-  { src: weddingVenue, alt: 'Luxury wedding reception' },
-  { src: corporateGala, alt: 'Corporate gala event' },
-  { src: celebrationDecor, alt: 'Birthday celebration' },
+  { src: weddingVenue, alt: "Luxury wedding reception" },
+  { src: corporateGala, alt: "Corporate gala event" },
+  { src: celebrationDecor, alt: "Birthday celebration" },
 ];
 
 export const HeroSection = () => {
@@ -37,8 +37,8 @@ export const HeroSection = () => {
             animate={{ opacity: 1, scale: 1.05 }}
             exit={{ opacity: 0 }}
             transition={{
-              opacity: { duration: 1.5, ease: 'easeInOut' },
-              scale: { duration: 8, ease: 'linear' },
+              opacity: { duration: 1.5, ease: "easeInOut" },
+              scale: { duration: 8, ease: "linear" },
             }}
             className="absolute inset-0"
           >
@@ -80,8 +80,8 @@ export const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 font-light">
-            Premium event planning, decoration, and rentals in the UK. 
-            Creating unforgettable moments with unparalleled artistry.
+            Premium event planning, decoration, and rentals in the UK. Creating
+            unforgettable moments with unparalleled artistry.
           </p>
 
           {/* CTAs */}
@@ -97,17 +97,6 @@ export const HeroSection = () => {
               </Link>
             </Button>
             
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-foreground/30 hover:border-foreground/60 text-foreground bg-transparent hover:bg-foreground/5 px-8 py-6 text-base group"
-            >
-              <Link to="/portfolio">
-                View Portfolio
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
           </div>
         </motion.div>
 
@@ -124,8 +113,8 @@ export const HeroSection = () => {
               onClick={() => setCurrentIndex(index)}
               className={`w-12 h-1 rounded-full transition-all duration-500 ${
                 index === currentIndex
-                  ? 'bg-primary w-16'
-                  : 'bg-foreground/30 hover:bg-foreground/50'
+                  ? "bg-primary w-16"
+                  : "bg-foreground/30 hover:bg-foreground/50"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
