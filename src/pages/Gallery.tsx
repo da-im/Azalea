@@ -23,22 +23,22 @@ import proposalSetup from '@/assets/gallery/proposal-setup.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
 
 const galleryItems = [
-  { id: '1', src: safariBirthday1, title: "Jayden's 1st Birthday - Safari Theme", eventType: 'Birthday', serviceType: 'Full Service' },
-  { id: '2', src: safariBirthday2, title: 'Safari Birthday Setup', eventType: 'Birthday', serviceType: 'Decoration' },
+  { id: '1', src: safariBirthday1, title: "Safari Themed birthday", eventType: 'Birthday', serviceType: 'Full Service' },
+  { id: '2', src: safariBirthday2, title: 'Single sailboard, themed setup with three coloured ballons - £250', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '3', src: weddingReception, title: 'Elegant Wedding Reception', eventType: 'Wedding', serviceType: 'Full Service' },
   { id: '4', src: enchantedReception, title: 'Enchanted Forest Reception', eventType: 'Wedding', serviceType: 'Full Service' },
-  { id: '5', src: babyShowerBloom, title: 'Baby Ade In Bloom - Baby Shower', eventType: 'Baby Shower', serviceType: 'Decoration' },
+  { id: '5', src: babyShowerBloom, title: 'Circle stand with one sailboard, three coloured balloons and accessories - £380', eventType: 'Baby Shower', serviceType: 'Decoration' },
   { id: '6', src: princessBirthday, title: 'Princess Chimasoka Birthday', eventType: 'Birthday', serviceType: 'Full Service' },
   { id: '7', src: proposalSetup, title: 'Will You Marry Me? - Proposal Setup', eventType: 'Proposal', serviceType: 'Decoration' },
   { id: '8', src: goldBirthday, title: 'Gold & Black Birthday Celebration', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '9', src: goldBlackParty, title: 'Elegant Black & Gold Party', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '10', src: birthdayArtParty, title: 'Art Party Birthday', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '11', src: event4, title: 'Safari-Themed Birthday', eventType: 'Birthday', serviceType: 'Decoration' },
-  { id: '12', src: event2, title: 'Wine-Themed Celebration', eventType: 'Birthday', serviceType: 'Decoration' },
+  { id: '12', src: event2, title: 'Single sailboard,three coloured balloons with accessories - £230', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '13', src: weddingVenue, title: 'Classic Wedding Venue', eventType: 'Wedding', serviceType: 'Full Service' },
-  { id: '14', src: event3, title: 'Travel Adventure Party', eventType: 'Birthday', serviceType: 'Decoration' },
+  { id: '14', src: event3, title: '2m x 3m themed setup - from £400', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '15', src: corporateGala, title: 'Corporate Gala Night', eventType: 'Corporate', serviceType: 'Full Service' },
-  { id: '16', src: event1, title: 'Construction Theme Party', eventType: 'Birthday', serviceType: 'Decoration' },
+  { id: '16', src: event1, title: 'Three coloured themed balloon setup without sailboard - from £80', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '17', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Birthday', serviceType: 'Decoration' },
 ];
 
