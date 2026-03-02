@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { globalSettings, services } from '@/lib/data';
-import { Mail, MapPin, Calendar, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Send, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -140,7 +140,18 @@ const Contact = () => {
                     <p className="font-medium">{globalSettings.email}</p>
                   </div>
                 </a>
-
+                 <a
+                  href={`tel:${globalSettings.phone}`}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted transition-colors group"
+                >
+                  <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Phone className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Phone</p>
+                    <p className="font-medium">{globalSettings.phone}</p>
+                  </div>
+                </a>
 
                 <div className="flex items-start gap-4 p-4 rounded-lg bg-card">
                   <div className="p-3 rounded-full bg-primary/10">
