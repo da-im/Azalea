@@ -9,9 +9,9 @@ import babyShowerBloom from '@/assets/gallery/baby-shower-bloom.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
 
 const galleryImages = [
-  { src: safariBirthday1, title: "Jayden's Safari Birthday", type: 'Birthday', price: 450 },
+  { src: safariBirthday1, title: "Safari Themed Birthday", type: 'Birthday', price: 450 },
   { src: weddingReception, title: 'Elegant Wedding Reception', type: 'Wedding', price: 1200 },
-  { src: babyShowerBloom, title: 'Baby Ade In Bloom', type: 'Baby Shower', price: 380 },
+  { src: babyShowerBloom, title: 'Beautiful Baby Shower', type: 'Baby Shower', price: 380 },
   { src: goldBirthday, title: 'Gold & Black Celebration', type: 'Birthday', price: 520 },
 ];
 
