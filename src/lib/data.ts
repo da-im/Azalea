@@ -65,6 +65,7 @@ export interface HeroImage {
 
 export interface GlobalSettings {
   email: string;
+  phone: string;
   address: string;
   businessHours: string;
 }
@@ -328,6 +329,7 @@ export const promos: Promo[] = [
 // Global Settings
 export const globalSettings: GlobalSettings = {
   email: 'azaleaaffairs@gmail.com',
+  phone: '07707211799',
   address: 'United Kingdom',
   businessHours: 'Mon-Sat: 9am - 6pm',
 };
