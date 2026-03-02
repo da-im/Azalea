@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { globalSettings } from '@/lib/data';
 import logo from '@/assets/azalea-logo.png';
 
@@ -69,6 +69,12 @@ export const Footer = () => {
                 <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
                 <a href={`mailto:${globalSettings.email}`} className="text-muted-foreground hover:text-foreground transition-colors">
                   {globalSettings.email}
+                </a>
+              </li>
+               <li className="flex items-start gap-3 text-sm">
+                <Phone size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                <a href={`tel:${globalSettings.phone}`} className="text-muted-foreground hover:text-foreground transition-colors">
+                  {globalSettings.phone}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm">
