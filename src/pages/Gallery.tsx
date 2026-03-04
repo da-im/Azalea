@@ -40,6 +40,7 @@ const galleryItems = [
   { id: '15', src: corporateGala, title: 'Corporate Gala Night', eventType: 'Corporate', serviceType: 'Full Service' },
   { id: '16', src: event1, title: 'Three coloured themed balloon setup without sailboard - from £80', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '17', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Birthday', serviceType: 'Decoration' },
+  { id: '18', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Rentals', serviceType: 'Decoration' },
 ];
 
 const eventTypes = ['All', 'Birthday', 'Wedding', 'Baby Shower', 'Proposal', 'Rentals', 'Corporate'];
