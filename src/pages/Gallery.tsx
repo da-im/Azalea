@@ -22,6 +22,17 @@ import goldBlackParty from '@/assets/gallery/gold-black-party.jpg';
 import proposalSetup from '@/assets/gallery/proposal-setup.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
 import stageLight = from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
+import rug = from '@/assets/gallery/Bohemian vintage hollow out semicircle rug - £10.jpg';
+import clrstand = from '@/assets/gallery/Clear cake stand £25.jpg';
+import gldstand = from '@/assets/gallery/Gold cake stand - £20.jpg';
+import goldmats = from '@/assets/gallery/Gold placemats - £1.jpg';
+import centrepieces = from '@/assets/gallery/Gold_crystal centre pieces - £10 each.jpg';
+import Ballonhoop = from '@/assets/gallery/Golden ballon hoop - £22.jpg';
+import shelf = from '@/assets/gallery/Rustic themed display shelf - £40.jpg';
+import Tags = from '@/assets/gallery/Table tags - £1.jpg';
+import WallWasher = from '@/assets/gallery/336 LED stage wall washer - £35.jpg';
+
+
 
 const galleryItems = [
   { id: '1', src: safariBirthday1, title: "Safari Themed birthday", eventType: 'Birthday', serviceType: 'Full Service' },
@@ -42,6 +53,17 @@ const galleryItems = [
   { id: '16', src: event1, title: 'Three coloured themed balloon setup without sailboard - from £80', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '17', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '18', src: StageLight, title: '180W 60LED PAR Stage light - £25.jpg', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '19', src: rug, title: 'Bohemian vintage hollow out semicircle rug - £10', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '20', src: clrstand, title: 'Clear cake stand £25', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '21', src: gldstand, title: 'Gold cake stand - £20.jpg', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '22', src: centrepieces, title: 'Gold_crystal centre pieces - £10 each', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '23', src: Ballonhoop, title: 'Golden ballon hoop - £22', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '24', src: shelf, title: 'Rustic themed display shelf - £40', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '25', src: Tags, title: 'Table tags - £1', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '26', src: WallWasher, title: '336 LED stage wall washer - £35', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '27', src: goldmats, title: 'Gold placemats - £1', eventType: 'Rentals', serviceType: 'Decoration' },
+
+
 ];
 
 const eventTypes = ['All', 'Birthday', 'Wedding', 'Baby Shower', 'Proposal', 'Rentals', 'Corporate'];
