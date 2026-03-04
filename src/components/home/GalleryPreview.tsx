@@ -7,12 +7,19 @@ import safariBirthday1 from '@/assets/gallery/safari-birthday-1.jpg';
 import weddingReception from '@/assets/gallery/wedding-reception.jpg';
 import babyShowerBloom from '@/assets/gallery/baby-shower-bloom.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
+import WallWasher from '@/assets/gallery/336 LED stage wall washer - £35.jpg';
+import stageLight from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
+
+
+
 
 const galleryImages = [
   { src: safariBirthday1, title: "Safari Themed Birthday", type: 'Birthday', price: 450 },
   { src: weddingReception, title: 'Elegant Wedding Reception', type: 'Wedding', price: 1200 },
   { src: babyShowerBloom, title: 'Beautiful Baby Shower', type: 'Baby Shower', price: 380 },
-  { src: goldBirthday, title: 'Gold & Black Celebration', type: 'Birthday', price: 520 },
+  { src: stageLight, title: '180W 60LED PAR Stage light', type: 'Rentals', price: 25 },
+  { src: WallWasher, title: '336 LED stage wall washer', type: 'Rentals', price: 35 },
+  
 ];
 
 export const GalleryPreview = () => {
