@@ -21,6 +21,7 @@ import enchantedReception from '@/assets/gallery/enchanted-reception.jpg';
 import goldBlackParty from '@/assets/gallery/gold-black-party.jpg';
 import proposalSetup from '@/assets/gallery/proposal-setup.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
+import StageLight = from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
 
 const galleryItems = [
   { id: '1', src: safariBirthday1, title: "Safari Themed birthday", eventType: 'Birthday', serviceType: 'Full Service' },
@@ -40,7 +41,7 @@ const galleryItems = [
   { id: '15', src: corporateGala, title: 'Corporate Gala Night', eventType: 'Corporate', serviceType: 'Full Service' },
   { id: '16', src: event1, title: 'Three coloured themed balloon setup without sailboard - from £80', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '17', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Birthday', serviceType: 'Decoration' },
-  { id: '18', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '18', src: StageLight, title: '180W 60LED PAR Stage light - £25.jpg', eventType: 'Rentals', serviceType: 'Decoration' },
 ];
 
 const eventTypes = ['All', 'Birthday', 'Wedding', 'Baby Shower', 'Proposal', 'Rentals', 'Corporate'];
