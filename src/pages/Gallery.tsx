@@ -28,7 +28,7 @@ const galleryItems = [
   { id: '3', src: weddingReception, title: 'Elegant Wedding Reception', eventType: 'Wedding', serviceType: 'Full Service' },
   { id: '4', src: enchantedReception, title: 'Enchanted Forest Reception', eventType: 'Wedding', serviceType: 'Full Service' },
   { id: '5', src: babyShowerBloom, title: 'Circle stand with one sailboard, three coloured balloons and accessories - £380', eventType: 'Baby Shower', serviceType: 'Decoration' },
-  { id: '6', src: princessBirthday, title: 'Princess Themed Birthday', eventType: 'Birthday', serviceType: 'Full Service' },
+  { id: '6', src: princessBirthday, title: 'Bow themed birthday with 2 layered cake from - £450', eventType: 'Birthday', serviceType: 'Full Service' },
   { id: '7', src: proposalSetup, title: 'Will You Marry Me? - Proposal Setup', eventType: 'Proposal', serviceType: 'Decoration' },
   { id: '8', src: goldBirthday, title: 'Gold & Black Birthday Celebration', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '9', src: goldBlackParty, title: 'Elegant Black & Gold Party', eventType: 'Birthday', serviceType: 'Decoration' },
