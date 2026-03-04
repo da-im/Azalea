@@ -21,16 +21,16 @@ import enchantedReception from '@/assets/gallery/enchanted-reception.jpg';
 import goldBlackParty from '@/assets/gallery/gold-black-party.jpg';
 import proposalSetup from '@/assets/gallery/proposal-setup.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
-import stageLight = from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
-import rug = from '@/assets/gallery/Bohemian vintage hollow out semicircle rug - £10.jpg';
-import clrstand = from '@/assets/gallery/Clear cake stand £25.jpg';
-import gldstand = from '@/assets/gallery/Gold cake stand - £20.jpg';
-import goldmats = from '@/assets/gallery/Gold placemats - £1.jpg';
-import centrepieces = from '@/assets/gallery/Gold_crystal centre pieces - £10 each.jpg';
-import Ballonhoop = from '@/assets/gallery/Golden ballon hoop - £22.jpg';
-import shelf = from '@/assets/gallery/Rustic themed display shelf - £40.jpg';
-import Tags = from '@/assets/gallery/Table tags - £1.jpg';
-import WallWasher = from '@/assets/gallery/336 LED stage wall washer - £35.jpg';
+import stageLight from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
+import rug  from '@/assets/gallery/Bohemian vintage hollow out semicircle rug - £10.jpg';
+import clrstand  from '@/assets/gallery/Clear cake stand £25.jpg';
+import gldstand  from '@/assets/gallery/Gold cake stand - £20.jpg';
+import goldmats  from '@/assets/gallery/Gold placemats - £1.jpg';
+import centrepieces from '@/assets/gallery/Gold_crystal centre pieces - £10 each.jpg';
+import Ballonhoop from '@/assets/gallery/Golden ballon hoop - £22.jpg';
+import shelf from '@/assets/gallery/Rustic themed display shelf - £40.jpg';
+import Tags  from '@/assets/gallery/Table tags - £1.jpg';
+import WallWasher from '@/assets/gallery/336 LED stage wall washer - £35.jpg';
 
 
 
