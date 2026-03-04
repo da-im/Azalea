@@ -52,7 +52,7 @@ const galleryItems = [
   { id: '15', src: corporateGala, title: 'Corporate Gala Night', eventType: 'Corporate', serviceType: 'Full Service' },
   { id: '16', src: event1, title: 'Three coloured themed balloon setup without sailboard - from £80', eventType: 'Birthday', serviceType: 'Decoration' },
   { id: '17', src: celebrationDecor, title: 'Luxury Birthday Setup', eventType: 'Birthday', serviceType: 'Decoration' },
-  { id: '18', src: StageLight, title: '180W 60LED PAR Stage light - £25.jpg', eventType: 'Rentals', serviceType: 'Decoration' },
+  { id: '18', src: stageLight, title: '180W 60LED PAR Stage light - £25.jpg', eventType: 'Rentals', serviceType: 'Decoration' },
   { id: '19', src: rug, title: 'Bohemian vintage hollow out semicircle rug - £10', eventType: 'Rentals', serviceType: 'Decoration' },
   { id: '20', src: clrstand, title: 'Clear cake stand £25', eventType: 'Rentals', serviceType: 'Decoration' },
   { id: '21', src: gldstand, title: 'Gold cake stand - £20.jpg', eventType: 'Rentals', serviceType: 'Decoration' },
