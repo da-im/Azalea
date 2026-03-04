@@ -21,7 +21,7 @@ import enchantedReception from '@/assets/gallery/enchanted-reception.jpg';
 import goldBlackParty from '@/assets/gallery/gold-black-party.jpg';
 import proposalSetup from '@/assets/gallery/proposal-setup.jpg';
 import goldBirthday from '@/assets/gallery/gold-birthday.jpg';
-import StageLight = from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
+import stageLight = from '@/assets/gallery/180W 60LED PAR Stage light - £25.jpg';
 
 const galleryItems = [
   { id: '1', src: safariBirthday1, title: "Safari Themed birthday", eventType: 'Birthday', serviceType: 'Full Service' },
