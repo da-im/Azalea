@@ -13,10 +13,10 @@ import shelf from '@/assets/gallery/Rustic themed display shelf - £40.jpg';
 
 
 const galleryImages = [
-  { src: safariBirthday1, title: "Safari Themed Birthday", type: 'Birthday', price: 450 },
+  { src: safariBirthday1, title: "Safari Themed Birthday", type: 'Birthday', price: 250 },
   { src: weddingReception, title: 'Elegant Wedding Reception', type: 'Wedding', price: 1200 },
   { src: babyShowerBloom, title: 'Beautiful Baby Shower', type: 'Baby Shower', price: 380 },
-  { src: goldBirthday, title: 'Gold & Black Birthday Celebration', type: 'Birthday', price: 520 },
+  { src: goldBirthday, title: 'Gold & Black Birthday Celebration', type: 'Birthday', price: 300 },
   { src: stageLight, title: '180W 60LED PAR Stage light', type: 'Rentals', price: 25 },
   { src: shelf, title: 'Rustic themed display shelf', type: 'Rentals', price: 40 },
   
