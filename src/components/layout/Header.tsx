@@ -51,7 +51,7 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) =>
+            {navLinks.map((link) =>
               link.isExternal ? (
                 <a
                   key={link.href}
@@ -89,7 +89,7 @@ export const Header = () => {
       </nav>
 
       {/* Mobile Menu */}
-     <AnimatePresence>
+      <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
