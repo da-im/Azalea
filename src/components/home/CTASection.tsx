@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { GOOGLE_FORM_URL } from '@/lib/data';
 
 export const CTASection = () => {
   return (
@@ -47,10 +48,10 @@ export const CTASection = () => {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base"
             >
-              <Link to="/contact">
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Send className="mr-2 h-5 w-5" />
                 Get In Touch
-              </Link>
+              </a>
             </Button>
 
 
