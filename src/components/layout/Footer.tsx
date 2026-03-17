@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { globalSettings } from '@/lib/data';
+import { globalSettings, GOOGLE_FORM_URL } from '@/lib/data';
 import logo from '@/assets/azalea-logo.png';
 
 export const Footer = () => {
@@ -30,15 +30,26 @@ export const Footer = () => {
                 { label: 'Services', href: '/services' },
                 { label: 'Gallery', href: '/gallery' },
                 { label: 'Promos', href: '/promos' },
-                { label: 'Contact', href: '/contact' },
+                { label: 'Contact', href: GOOGLE_FORM_URL, isExternal: true },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link
-                    to={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.isExternal ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
