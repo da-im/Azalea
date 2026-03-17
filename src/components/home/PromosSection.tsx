@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { promos } from '@/lib/data';
+import { promos, GOOGLE_FORM_URL } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 
 export const PromosSection = () => {
@@ -52,7 +52,7 @@ export const PromosSection = () => {
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-                
+
                 {/* Price Badge */}
                 <div className="absolute bottom-4 left-4 px-4 py-2 bg-accent text-accent-foreground text-lg font-bold rounded-full shadow-lg">
                   £{promo.price}
@@ -65,7 +65,7 @@ export const PromosSection = () => {
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                   {promo.offerDetail}
                 </p>
-                
+
                 {/* Features Preview */}
                 {promo.features && promo.features.length > 0 && (
                   <ul className="text-xs text-muted-foreground mb-4 space-y-1">
@@ -87,10 +87,10 @@ export const PromosSection = () => {
                     asChild
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
-                    <Link to="/contact">
+                    <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                       Book Now
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </div>
