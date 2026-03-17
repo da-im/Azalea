@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
-import { services } from '@/lib/data';
+import { services, GOOGLE_FORM_URL } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Check, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -55,7 +55,7 @@ const Services = () => {
           />
           <div className="absolute inset-0 bg-background/80" />
         </div>
-        
+
         <div className="relative z-10 text-center px-6">
           <motion.p
             initial={{ opacity: 0 }}
@@ -87,9 +87,8 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                  }`}
               >
                 {/* Image */}
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -126,10 +125,10 @@ const Services = () => {
                     asChild
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
-                    <Link to="/contact">
+                    <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                       <Send className="mr-2 h-4 w-4" />
                       Book Consultation
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </motion.div>
@@ -143,7 +142,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-muted-foreground text-sm">
-              * Final quote provided after a paid consultation where we discuss your specific 
+              * Final quote provided after a paid consultation where we discuss your specific
               requirements, venue, and vision in detail.
             </p>
           </div>
