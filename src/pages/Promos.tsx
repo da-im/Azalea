@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
-import { promos } from '@/lib/data';
+import { promos, GOOGLE_FORM_URL } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Sparkles, ArrowRight, Clock, Check, Gift } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -22,7 +22,7 @@ const Promos = () => {
           />
           <div className="absolute inset-0 bg-background/80" />
         </div>
-        
+
         <div className="relative z-10 text-center px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -66,7 +66,7 @@ const Promos = () => {
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                    
+
                     {/* Promo Badge */}
                     <div className="absolute top-4 left-4 flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
                       <Gift className="h-4 w-4" />
@@ -91,7 +91,7 @@ const Promos = () => {
                     <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
                       {promo.description}
                     </p>
-                    
+
                     {/* Features */}
                     {promo.features && promo.features.length > 0 && (
                       <div className="mb-6">
@@ -138,10 +138,10 @@ const Promos = () => {
                         asChild
                         className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6"
                       >
-                        <Link to="/contact">
+                        <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                           Book This Package
                           <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
+                        </a>
                       </Button>
                     </div>
                   </div>
@@ -177,9 +177,9 @@ const Promos = () => {
               variant="outline"
               className="border-primary/50 hover:border-primary text-foreground hover:bg-primary/10"
             >
-              <Link to="/contact">
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                 Request Custom Package
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
