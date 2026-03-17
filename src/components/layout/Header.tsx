@@ -50,7 +50,8 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-         {navLinks.map((link) =>
+          <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) =>
               link.isExternal ? (
                 <a
                   key={link.href}
