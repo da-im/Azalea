@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Send, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GOOGLE_FORM_URL } from "@/lib/data";
 
 import weddingVenue from "@/assets/hero/wedding-venue.jpg";
 import corporateGala from "@/assets/hero/corporate-gala.jpg";
@@ -91,17 +92,17 @@ export const HeroSection = () => {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base group animate-pulse-glow"
             >
-              <Link to="/contact">
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Send className="mr-2 h-5 w-5" />
                 Book a Paid Consultation
-              </Link>
+              </a>
             </Button>
-            
+
           </div>
-        </motion.div>
+          </motion.div>
 
         {/* Image Indicators */}
-        <motion.div
+       <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
@@ -111,11 +112,10 @@ export const HeroSection = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-12 h-1 rounded-full transition-all duration-500 ${
-                index === currentIndex
+              className={`w-12 h-1 rounded-full transition-all duration-500 ${index === currentIndex
                   ? "bg-primary w-16"
                   : "bg-foreground/30 hover:bg-foreground/50"
-              }`}
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
