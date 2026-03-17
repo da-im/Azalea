@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { globalSettings, GOOGLE_FORM_URL } from '@/lib/data';
 import logo from '@/assets/azalea-logo.png';
 
 const navLinks = [
@@ -10,7 +11,7 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/promos', label: 'Promos' },
-  { href: '/contact', label: 'Book Consultation' },
+  { href: GOOGLE_FORM_URL, label: 'Book Consultation', isExternal: true },
 ];
 
 export const Header = () => {
@@ -32,11 +33,10 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-md border-b border-border/50'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-background/95 backdrop-blur-md border-b border-border/50'
+        : 'bg-transparent'
+        }`}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
