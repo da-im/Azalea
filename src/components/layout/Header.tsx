@@ -50,20 +50,30 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`link-elegant text-sm font-medium tracking-wide uppercase transition-colors ${
-                  location.pathname === link.href
-                    ? 'text-primary'
-                    : 'text-foreground/80 hover:text-foreground'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+         {navLinks.map((link) =>
+              link.isExternal ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-elegant text-sm font-medium tracking-wide uppercase transition-colors text-foreground/80 hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`link-elegant text-sm font-medium tracking-wide uppercase transition-colors ${location.pathname === link.href
+                      ? 'text-primary'
+                      : 'text-foreground/80 hover:text-foreground'
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,7 +88,7 @@ export const Header = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+     <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -95,16 +105,26 @@ export const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link
-                    to={link.href}
-                    className={`text-2xl font-display tracking-wide transition-colors ${
-                      location.pathname === link.href
-                        ? 'text-primary'
-                        : 'text-foreground/80 hover:text-foreground'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.isExternal ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-2xl font-display tracking-wide transition-colors text-foreground/80 hover:text-foreground"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className={`text-2xl font-display tracking-wide transition-colors ${location.pathname === link.href
+                          ? 'text-primary'
+                          : 'text-foreground/80 hover:text-foreground'
+                        }`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </div>
