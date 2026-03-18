@@ -63,13 +63,6 @@ export const ServicesPreview = () => {
                   {service.description}
                 </p>
                 
-                <Link
-                  to="/services"
-                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm font-medium"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
               </div>
             </motion.div>
           ))}
