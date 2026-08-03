@@ -2,84 +2,24 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { globalSettings, services } from '@/lib/data';
-import { Mail, Phone, MapPin, Calendar, Send, CheckCircle } from 'lucide-react';
-import { toast } from 'sonner';
-import { Link } from 'react-router-dom';
+import { globalSettings } from '@/lib/data';
+import { Mail, Phone, MapPin, Calendar, Send, Instagram } from 'lucide-react';
 
 import weddingVenue from '@/assets/hero/wedding-venue.jpg';
 
-const budgetRanges = [
-  'Under £500',
-  '£500 - £1,000',
-  '£1,000 - £2,500',
-  '£2,500 - £5,000',
-  '£5,000+',
-];
+const TikTokIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.883 2.88a2.896 2.896 0 0 1-2.884-2.88a2.896 2.896 0 0 1 2.884-2.881c.427 0 .835.093 1.205.257V9.524a6.309 6.309 0 0 0-1.205-.116A6.335 6.335 0 0 0 3.15 15.743a6.335 6.335 0 0 0 6.336 6.335 6.335 6.335 0 0 0 6.335-6.335V9.117a8.212 8.212 0 0 0 4.768 1.503V7.175a4.83 4.83 0 0 1-1.000-.489z" />
+  </svg>
+);
 
 const Contact = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    eventType: '',
-    services: [] as string[],
-    eventDate: '',
-    location: '',
-    budget: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In production, this would submit to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    toast.success('Thank you! We will be in touch shortly.');
-  };
-
-  const handleServiceToggle = (serviceId: string) => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(s => s !== serviceId)
-        : [...prev.services, serviceId],
-    }));
-  };
-
-  if (isSubmitted) {
-    return (
-      <Layout>
-        <section className="min-h-[80vh] flex items-center justify-center py-24">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-center px-6"
-          >
-            <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
-              <CheckCircle className="h-10 w-10 text-primary" />
-            </div>
-            <h1 className="font-display text-3xl md:text-4xl mb-4">Thank You!</h1>
-            <p className="text-muted-foreground max-w-md mx-auto mb-8">
-              We've received your enquiry and will be in touch within 24 hours to discuss your paid consultation.
-            </p>
-            <Button
-              asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              <Link to="/">
-                Back to Home
-              </Link>
-            </Button>
-          </motion.div>
-        </section>
-      </Layout>
-    );
-  }
+  const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeJexv2QT1t8WE8u8VanBlBGaQbO12Mp3xJFvmBRM_sqXrdcw/viewform';
 
   return (
     <Layout>
@@ -93,7 +33,7 @@ const Contact = () => {
           />
           <div className="absolute inset-0 bg-background/85" />
         </div>
-        
+
         <div className="relative z-10 text-center px-6">
           <motion.p
             initial={{ opacity: 0 }}
@@ -126,7 +66,7 @@ const Contact = () => {
               className="lg:col-span-1"
             >
               <h2 className="font-display text-2xl mb-8">Contact Information</h2>
-              
+
               <div className="space-y-6">
                 <a
                   href={`mailto:${globalSettings.email}`}
@@ -140,7 +80,8 @@ const Contact = () => {
                     <p className="font-medium">{globalSettings.email}</p>
                   </div>
                 </a>
-                 <a
+
+                <a
                   href={`tel:${globalSettings.phone}`}
                   className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted transition-colors group"
                 >
@@ -172,174 +113,71 @@ const Contact = () => {
                     <p className="font-medium">{globalSettings.businessHours}</p>
                   </div>
                 </div>
+
+                <a
+                  href={globalSettings.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted transition-colors group"
+                >
+                  <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Instagram className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Instagram</p>
+                    <p className="font-medium">{globalSettings.instagramHandle}</p>
+                  </div>
+                </a>
+
+                <a
+                  href={globalSettings.tiktokUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted transition-colors group"
+                >
+                  <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <TikTokIcon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">TikTok</p>
+                    <p className="font-medium">{globalSettings.tiktokHandle}</p>
+                  </div>
+                </a>
               </div>
             </motion.div>
 
-            {/* Booking Form */}
+            {/* CTA Section */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
               className="lg:col-span-2"
             >
-              <div className="bg-card rounded-xl p-8 border border-border">
-                <h2 className="font-display text-2xl mb-2">Booking Enquiry</h2>
-                <p className="text-muted-foreground text-sm mb-8">
-                  Fill out the form below and we'll get back to you within 24 hours.
+              <div className="bg-card rounded-xl p-8 md:p-12 border border-border text-center h-full flex flex-col items-center justify-center">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-8">
+                  <Calendar className="h-10 w-10 text-primary" />
+                </div>
+                <h2 className="font-display text-3xl mb-4">Book Your Consultation</h2>
+                <p className="text-muted-foreground max-w-md mx-auto mb-10">
+                  Ready to transform your vision into reality? Click the button below to fill out our booking enquiry form on Google Forms.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name & Email */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Your full name"
-                        className="bg-background"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="your@email.com"
-                        className="bg-background"
-                      />
-                    </div>
-                  </div>
+                <Button
+                  asChild
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground py-8 px-12 text-lg rounded-full"
+                >
+                  <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+                    Open Booking Form <Send className="ml-3 h-5 w-5" />
+                  </a>
+                </Button>
 
-                  {/* Phone & Event Type */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number *</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+44 7000 000 000"
-                        className="bg-background"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="eventType">Event Type *</Label>
-                      <Input
-                        id="eventType"
-                        required
-                        value={formData.eventType}
-                        onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                        placeholder="e.g., Wedding, Birthday, Corporate"
-                        className="bg-background"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Services Selection */}
-                  <div className="space-y-3">
-                    <Label>Services Interested In</Label>
-                    <div className="flex flex-wrap gap-3">
-                      {services.map((service) => (
-                        <button
-                          key={service.id}
-                          type="button"
-                          onClick={() => handleServiceToggle(service.id)}
-                          className={`px-4 py-2 rounded-full text-sm transition-all ${
-                            formData.services.includes(service.id)
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                          }`}
-                        >
-                          {service.title}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Date & Location */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="eventDate">Event Date</Label>
-                      <Input
-                        id="eventDate"
-                        type="date"
-                        value={formData.eventDate}
-                        onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                        className="bg-background"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="location">Event Location (UK)</Label>
-                      <Input
-                        id="location"
-                        value={formData.location}
-                        onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                        placeholder="City or venue"
-                        className="bg-background"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Budget */}
-                  <div className="space-y-3">
-                    <Label>Budget Range</Label>
-                    <div className="flex flex-wrap gap-3">
-                      {budgetRanges.map((range) => (
-                        <button
-                          key={range}
-                          type="button"
-                          onClick={() => setFormData({ ...formData, budget: range })}
-                          className={`px-4 py-2 rounded-full text-sm transition-all ${
-                            formData.budget === range
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                          }`}
-                        >
-                          {range}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Message */}
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Additional Details</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Tell us about your vision, theme ideas, or any specific requirements..."
-                      rows={4}
-                      className="bg-background resize-none"
-                    />
-                  </div>
-
-                  {/* Note */}
-                  <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Note:</strong> Consultations are paid to ensure 
-                      dedicated time and expert guidance. We'll discuss consultation fees when we respond 
-                      to your enquiry.
-                    </p>
-                  </div>
-
-                  {/* Submit */}
-                  <Button
-                    type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-base"
-                  >
-                    <Send className="mr-2 h-4 w-4" />
-                    Submit Enquiry
-                  </Button>
-                </form>
+                <div className="mt-12 p-6 bg-primary/5 border border-primary/20 rounded-xl max-w-lg">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    <strong className="text-foreground">Note:</strong> Consultations are paid to ensure
+                    dedicated time and expert guidance. We'll discuss consultation fees when we respond
+                    to your enquiry.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>

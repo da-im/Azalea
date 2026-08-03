@@ -68,6 +68,10 @@ export interface GlobalSettings {
   phone: string;
   address: string;
   businessHours: string;
+  instagramUrl: string;
+  instagramHandle: string;
+  tiktokUrl: string;
+  tiktokHandle: string;
 }
 
 // Hero Images
@@ -328,10 +332,16 @@ export const promos: Promo[] = [
 export const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeJexv2QT1t8WE8u8VanBlBGaQbO12Mp3xJFvmBRM_sqXrdcw/viewform';
 
 
+export const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeJexv2QT1t8WE8u8VanBlBGaQbO12Mp3xJFvmBRM_sqXrdcw/viewform';
+
 // Global Settings
 export const globalSettings: GlobalSettings = {
   email: 'azaleaaffairs@gmail.com',
   phone: '07707211799',
   address: 'United Kingdom',
   businessHours: 'Mon-Sat: 9am - 6pm',
+  instagramUrl: 'https://instagram.com/azaleaaffairs',
+  instagramHandle: '@azaleaaffairs',
+  tiktokUrl: 'https://tiktok.com/@azaleaaffairs',
+  tiktokHandle: '@azaleaaffairs',
 };
