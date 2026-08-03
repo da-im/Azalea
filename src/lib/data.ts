@@ -331,9 +331,6 @@ export const promos: Promo[] = [
 ];
 export const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeJexv2QT1t8WE8u8VanBlBGaQbO12Mp3xJFvmBRM_sqXrdcw/viewform';
 
-
-export const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeJexv2QT1t8WE8u8VanBlBGaQbO12Mp3xJFvmBRM_sqXrdcw/viewform';
-
 // Global Settings
 export const globalSettings: GlobalSettings = {
   email: 'azaleaaffairs@gmail.com',
