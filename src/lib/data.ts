@@ -340,6 +340,6 @@ export const globalSettings: GlobalSettings = {
   businessHours: 'Mon-Sat: 9am - 6pm',
   instagramUrl: 'https://instagram.com/azaleaaffairs',
   instagramHandle: '@azaleaaffairs',
-  tiktokUrl: 'https://tiktok.com/@adetoke_d',
-  tiktokHandle: '@adetoke_d',
+  tiktokUrl: 'https://tiktok.com/@azaleaaffairs',
+  tiktokHandle: '@azaleaaffairs',
 };
